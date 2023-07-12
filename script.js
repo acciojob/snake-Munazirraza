@@ -56,7 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Check if the new head collides with the snake's body or the game boundaries
-    if (newHead === null || snake.includes(newHead) || newHead.classList.contains('snakeBodyPixel')) {
+    if (
+      newHead === null ||
+      snake.includes(newHead) ||
+      newHead.classList.contains('snakeBodyPixel')
+    ) {
       clearInterval(interval);
       alert('Game Over!');
       return;
@@ -87,7 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Generate a random food pixel
   function generateFood() {
-    const emptyPixels = Array.from(container.getElementsByClassName('pixel')).filter(pixel => !pixel.classList.contains('snakeBodyPixel'));
+    const emptyPixels = Array.from(container.getElementsByClassName('pixel')).filter(
+      pixel => !pixel.classList.contains('snakeBodyPixel')
+    );
 
     const randomIndex = Math.floor(Math.random() * emptyPixels.length);
     const foodPixel = emptyPixels[randomIndex];
