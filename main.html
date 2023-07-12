@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Snake Game</title>
-  <style>
-    #gameContainer {
-      width: 400px;
-      height: 400px;
-      display: grid;
-      grid-template-columns: repeat(40, 10px);
-    }
-    .pixel {
-      width: 10px;
-      height: 10px;
-      background-color: #eee;
-      border: 1px solid #ddd;
-    }
-    .food {
-      background-color: red;
-    }
-    .snakeBodyPixel {
-      background-color: green;
-    }
-    .scoreBoard {
-      margin-top: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div id="gameContainer"></div>
-  <div class="scoreBoard">Score: <span id="score">0</span></div>
 
-  <script src="script.js"></script>
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- the entire body must be written by student -->
+	<div id="gameContainer"></div>
+
+
+	<!-- #scoreContainer contains the scores -->
+	<div id="scoreContainer">
+		<div class="scoreBoard">Your Score: <span id="pointsEarned">0</span></div>
+	</div>
+
+
+	<!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+	<div id="onScreenControllers">
+		<button id="leftButton">◀️</button>
+		<div>
+			<button id="upButton">🔼</button>
+			<button id="downButton">🔽</button>
+		</div>
+		<button id="rightButton">▶️</button>
+	</div>
+
+
+	<script type="text/javascript" src="./script.js">
+	</script>
+
 </body>
+
 </html>
